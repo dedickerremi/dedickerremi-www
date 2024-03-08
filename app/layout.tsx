@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://dedickerremi.com",
     images: [
       {
-        url: "https://dedickerremi.com/og-image.jpg",
+        url: "https://dedickerremi.com/navbar-logo.jpg",
         width: 1200,
         height: 630,
         alt: "Dedicker Remi",
