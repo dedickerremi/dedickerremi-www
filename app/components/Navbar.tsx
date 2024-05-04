@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 
 type NavbarProps = {}
@@ -11,7 +10,7 @@ export const Navbar = ({}: NavbarProps) => {
       </span>
       <Link
         href={
-          "https://drive.google.com/file/d/1bpOQwnMChBare2D3-9TooP5rTWelWgZa/view?usp=sharing"
+          "https://drive.google.com/file/d/1VeIsb9n0_f7lkYKpK4Gbp6Oi-mpHxOg6/view?usp=sharing"
         }
         target="_blank"
         rel="noopener noreferrer"
