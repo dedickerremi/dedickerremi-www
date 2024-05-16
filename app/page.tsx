@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { FloatButtonMenu } from "./components/ui/FloatButton"
-import { useCallback, useState } from "react"
 
 export default function Home() {
   return (
