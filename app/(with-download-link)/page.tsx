@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { FloatButtonMenu } from "./components/ui/FloatButton"
+import { FloatButtonMenu } from "../components/ui/FloatButton"
 
 export default function Home() {
   return (
