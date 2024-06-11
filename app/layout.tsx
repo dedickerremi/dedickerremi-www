@@ -1,8 +1,6 @@
 import { GoogleAnalytics } from "@next/third-parties/google"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
-import { Footer } from "./components/Footer"
-import { Navbar } from "./components/Navbar"
 import "./globals.css"
 
 const inter = Poppins({
@@ -36,11 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-100`}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className={`${inter.className} bg-gray-100`}>{children}</body>
       <GoogleAnalytics gaId="G-EJMZL9Z45F" />
     </html>
   )
