@@ -35,13 +35,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-gray-100`}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-      <GoogleAnalytics gaId="G-EJMZL9Z45F" />
-    </html>
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
   )
 }

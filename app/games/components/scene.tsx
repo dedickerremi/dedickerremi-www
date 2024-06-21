@@ -3,6 +3,8 @@
 import { render } from "@/src/three"
 import { useEffect, useRef } from "react"
 import * as THREE from "three"
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js"
+import { ArcballControls } from "three/examples/jsm/controls/ArcballControls.js"
 
 export const Scene: React.FC = () => {
   const containerRef = useRef<HTMLCanvasElement>(null)
@@ -33,10 +35,14 @@ export const Scene: React.FC = () => {
 
       const cube = new THREE.Mesh(geometry, material)
       cube.name = "cube"
-      cube.addEventListener("click", () => {
-        console.info("cube clicked")
+      // scene.add(cube)
+
+      const controls = new ArcballControls(camera, renderer.domElement, scene)
+      controls.update()
+
+      controls.addEventListener("change", function () {
+        renderer.render(scene, camera)
       })
-      scene.add(cube)
 
       const color = 0xffffff
       const intensity = 3
@@ -45,6 +51,33 @@ export const Scene: React.FC = () => {
       scene.add(light)
 
       renderer.setPixelRatio(window.devicePixelRatio)
+
+      const loader = new GLTFLoader()
+
+      // Load a glTF resource
+      loader.load(
+        // resource URL
+        "/vessel/scene.gltf",
+        // called when the resource is loaded
+        function (gltf) {
+          scene.add(gltf.scene)
+
+          gltf.animations // Array<THREE.AnimationClip>
+          gltf.scene // THREE.Group
+          gltf.scenes // Array<THREE.Group>
+          gltf.cameras // Array<THREE.Camera>
+          gltf.asset // Object
+        },
+        // called while loading is progressing
+        function (xhr) {
+          console.log((xhr.loaded / xhr.total) * 100 + "% loaded")
+        },
+        // called when loading has errors
+        function (error) {
+          console.error(error)
+          console.log("An error happened")
+        }
+      )
 
       requestAnimationFrame(render({ scene, camera, renderer }))
     }
