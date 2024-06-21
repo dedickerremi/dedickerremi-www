@@ -25,8 +25,8 @@ export const FloatButtonMenu = ({}: FloatButtonMenuType) => {
         <span className="absolute -inset-1.5"></span>
         <span className="sr-only">Open user menu</span>
         <AddIcon
-          width="64"
-          height="64"
+          width="48"
+          height="48"
           className={`${isMenuOpen ? "-rotate-45 duration-150" : ""}`}
         />
       </div>
