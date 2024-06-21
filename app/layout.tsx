@@ -11,7 +11,7 @@ const inter = Poppins({
 export const metadata: Metadata = {
   title: "Dedicker Remi",
   description:
-    "Dedicker Remi portfolio - Fullstack developer based in Amsterdam",
+    "Dedicker Remi portfolio - Fullstack developer currently based in Amsterdam",
   openGraph: {
     type: "website",
     locale: "en_US",
