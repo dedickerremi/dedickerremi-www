@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react"
 import { AddIcon } from "./icons/Add"
 import { useOutsideClick } from "../hooks/use-outside-click"
+import { Settings } from "@/settings"
 
 type FloatButtonMenuType = {
   onClick?: () => void
@@ -23,7 +24,7 @@ export const FloatButtonMenu = ({}: FloatButtonMenuType) => {
         className={`rounded-full shadow-xl p-0.25 bg-gray-600`}
       >
         <span className="absolute -inset-1.5"></span>
-        <span className="sr-only">Open user menu</span>
+        <span className="sr-only">Open menu</span>
         <AddIcon
           width="48"
           height="48"
@@ -41,9 +42,7 @@ export const FloatButtonMenu = ({}: FloatButtonMenuType) => {
         tabIndex={-1}
       >
         <a
-          href={
-            "https://drive.google.com/file/d/1bpOQwnMChBare2D3-9TooP5rTWelWgZa/view?usp=sharing"
-          }
+          href={Settings.urls.CV}
           className="block px-4 py-2 text-sm text-gray-700"
           role="menuitem"
           tabIndex={-1}
