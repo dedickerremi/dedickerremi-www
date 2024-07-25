@@ -1,11 +1,11 @@
-export type Skill = {
+export type SkillType = {
   name: string
   description: string
   icon?: string
   level: number
 }
 
-export const SKILLS: Record<string, Array<Skill>> = {
+export const SKILLS: Record<string, Array<SkillType>> = {
   frontend: [
     {
       name: "React",
@@ -18,6 +18,17 @@ export const SKILLS: Record<string, Array<Skill>> = {
       level: 4,
     },
     {
+      name: "TypeScript",
+      description: "Typed JavaScript at Any Scale",
+      level: 3,
+      icon: "TS",
+    },
+    {
+      name: "Unit Testing",
+      description: "Unit Testing",
+      level: 4,
+    },
+    {
       name: "TailwindCSS",
       description:
         "A utility-first CSS framework for rapidly building custom designs",
@@ -27,26 +38,18 @@ export const SKILLS: Record<string, Array<Skill>> = {
       name: "HTML Semantic",
       description: "Semantic HTML elements",
       level: 4,
+      icon: "HTML",
     },
     {
       name: "SEO best practices",
       description: "SEO best practices",
       level: 4,
-    },
-    {
-      name: "Unit Testing",
-      description: "Unit Testing",
-      level: 4,
+      icon: "SEO",
     },
     {
       name: "Responsive Design",
       description: "Design that works on all devices",
       level: 4,
-    },
-    {
-      name: "TypeScript",
-      description: "Typed JavaScript at Any Scale",
-      level: 3,
     },
     {
       name: "Webpack",
@@ -99,5 +102,53 @@ export const SKILLS: Record<string, Array<Skill>> = {
       level: 4,
     },
   ],
-  soft: [],
+  thirdParties: [
+    {
+      name: "Google Analytics",
+      description: "Google Analytics",
+      level: 4,
+    },
+    {
+      name: "Google Tag Manager",
+      description: "Google Tag Manager",
+      level: 4,
+    },
+    {
+      name: "Stripe",
+      description: "Stripe",
+      level: 4,
+    },
+    {
+      name: "AWS",
+      description: "Amazon Web Services",
+      level: 4,
+    },
+  ],
+  soft: [
+    {
+      name: "Problem Solving",
+      description: "Problem Solving",
+      level: 4,
+    },
+    {
+      name: "Communication",
+      description: "Communication",
+      level: 4,
+    },
+    {
+      name: "Teamwork",
+      description: "Teamwork",
+      level: 4,
+    },
+    {
+      name: "Time Management",
+      description: "Time Management",
+      level: 4,
+    },
+    {
+      name: "Agile Methodologies",
+      description: "Agile Methodologies",
+      level: 4,
+    },
+  ],
 }

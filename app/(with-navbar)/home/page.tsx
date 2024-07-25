@@ -5,7 +5,7 @@ import { Skills } from "./components/Skills"
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between ">
+    <main className="flex flex-col items-center justify-between">
       <Profile />
       <Skills />
       <FloatButtonMenu />
