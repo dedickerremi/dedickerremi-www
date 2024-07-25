@@ -11,10 +11,9 @@ export const Skill = ({
 }) => {
   return (
     <div
-      className={`ml-4 rounded-full flex items-center text-xl mx-auto ${className}`}
+      className={`rounded-full flex justify-center text-xl mb-2 ${className}`}
     >
       {skill.name}
-      {isLastSkill ? "" : ","}
     </div>
   )
 }

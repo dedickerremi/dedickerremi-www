@@ -1,3 +1,4 @@
+import { Links } from "@/app/components/Links"
 import Image from "next/image"
 
 export const Profile = () => {
@@ -26,6 +27,7 @@ export const Profile = () => {
           </p>
         </div>
       </div>
+      <Links />
     </section>
   )
 }
