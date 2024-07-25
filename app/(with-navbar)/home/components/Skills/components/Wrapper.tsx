@@ -7,25 +7,23 @@ import { SKILLS } from "../constant"
 
 const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
   return (
-    <>
-      <div className="flex flex-col lg:flex-row w-full my-4">
-        <h2 className="text-2xl  mb-8 font-medium content-center text-center min-w-48">
-          {title}
-        </h2>
-        <div className="flex flex-wrap">
-          {skills.map((skill, index) => {
-            return (
-              <Skill
-                key={`key-${index}`}
-                className="flex sm:w-full md:w-1/2 lg:w-1/3"
-                skill={skill}
-                isLastSkill={index === skills.length - 1}
-              />
-            )
-          })}
-        </div>
+    <div className="flex flex-col lg:flex-row w-full my-4">
+      <h2 className="text-2xl mb-8 mt-6 font-medium content-center text-center min-w-48">
+        {title}
+      </h2>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 w-full">
+        {skills.map((skill, index) => {
+          return (
+            <Skill
+              key={`key-${index}`}
+              className="flex"
+              skill={skill}
+              isLastSkill={index === skills.length - 1}
+            />
+          )
+        })}
       </div>
-    </>
+    </div>
   )
 }
 
@@ -36,23 +34,21 @@ export const Wrapper = () => {
   const isVisible = useIsVisible(ref)
 
   return (
-    <>
-      <div
-        className={`flex py-32 flex-wrap transition-opacity ease-in duration-700 flex-row ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
-        ref={ref}
-      >
-        <section className="flex flex-col">
-          <Display title="Frontend" skills={SKILLS.frontend} />
-          <div className={dividerCss} />
-          <Display title="Backend" skills={SKILLS.backend} />
-          <div className={dividerCss} />
-          <Display title="Database" skills={SKILLS.database} />
-          <div className={dividerCss} />
-          <Display title="Soft" skills={SKILLS.soft} />
-        </section>
-      </div>
-    </>
+    <div
+      className={`flex py-32 flex-wrap transition-opacity ease-in duration-700 w-full flex-row ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+      ref={ref}
+    >
+      <section className="flex flex-col w-full">
+        <Display title="Frontend" skills={SKILLS.frontend} />
+        <div className={dividerCss} />
+        <Display title="Backend" skills={SKILLS.backend} />
+        <div className={dividerCss} />
+        <Display title="Database" skills={SKILLS.database} />
+        <div className={dividerCss} />
+        <Display title="Soft" skills={SKILLS.soft} />
+      </section>
+    </div>
   )
 }
