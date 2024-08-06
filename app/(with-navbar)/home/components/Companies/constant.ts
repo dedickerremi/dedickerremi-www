@@ -1,4 +1,4 @@
-type ProjectType = {
+export type ProjectType = {
   name: string
   description: string
   projectLink: string
@@ -7,13 +7,15 @@ type ProjectType = {
   projects?: Array<ProjectType>
 }
 
-const DowJones: ProjectType = {
+export const DowJones: ProjectType = {
   name: "Dow Jones",
   description:
     "Dow Jones is a financial information service that provides news and data on stock markets.",
   projectLink: "https://www.dowjones.com/",
   skills: [],
-  gallery: [],
+  gallery: [
+    "https://pbs.twimg.com/profile_images/1280138556535693312/NUO0ZFF0_400x400.jpg",
+  ],
   projects: [
     {
       name: "Risk & Compliance",
@@ -34,23 +36,25 @@ const DowJones: ProjectType = {
   ],
 }
 
-const Tappx: ProjectType = {
+export const Tappx: ProjectType = {
   name: "Tappx",
   description:
     "Tappx is an AdTech company that provides solutions for mobile app developers.",
   projectLink: "https://www.tappx.com/",
   skills: [],
-  gallery: [],
+  gallery: ["/tappx-techsoul.webp"],
   projects: [],
 }
 
-const ReversedDigital: ProjectType = {
+export const ReversedDigital: ProjectType = {
   name: "Reversed Digital",
   description:
     "Reversed Digital is a digital marketing agency that provides services for businesses.",
   projectLink: "https://reversed.digital/",
-  skills: [],
-  gallery: [],
+  skills: ["NextJs", "TailwindCSS", "SEO", "Responsive Design", "Ecommerce"],
+  gallery: [
+    "https://reverseddigital.com/assets/7b2cb684-9775-01b4-a586-c1688bca4a29/fa170b6a-4b33-4cca-9f8f-e89e7404e323/fra%20-%20Case%20Small.png?fm=webp&fit=max&w=1280",
+  ],
   projects: [
     {
       name: "Xpozer.com",
@@ -69,12 +73,12 @@ const ReversedDigital: ProjectType = {
   ],
 }
 
-const Epitech: ProjectType = {
+export const Epitech: ProjectType = {
   name: "Epitech",
   description:
     "Epitech is a private higher education institution that provides courses in computer science.",
   projectLink: "https://www.epitech.eu/",
   skills: [],
-  gallery: [],
+  gallery: ["/epitech.png"],
   projects: [],
 }
