@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["reverseddigital.com", "pbs.twimg.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "reverseddigital.com",
+      },
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+      },
+    ],
   },
   rewrites: async () => {
     return [

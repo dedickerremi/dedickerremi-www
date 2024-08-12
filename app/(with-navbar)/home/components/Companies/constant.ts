@@ -5,6 +5,10 @@ export type ProjectType = {
   skills: Array<string>
   gallery: Array<string>
   projects?: Array<ProjectType>
+  url?: string
+  theme?: {
+    background?: string
+  }
 }
 
 export const DowJones: ProjectType = {
@@ -42,7 +46,7 @@ export const Tappx: ProjectType = {
     "Tappx is an AdTech company that provides solutions for mobile app developers.",
   projectLink: "https://www.tappx.com/",
   skills: [],
-  gallery: ["/tappx-techsoul.webp"],
+  gallery: ["/tappx.jpg"],
   projects: [],
 }
 
@@ -71,6 +75,9 @@ export const ReversedDigital: ProjectType = {
       gallery: [],
     },
   ],
+  theme: {
+    background: "#2FB6D2",
+  },
 }
 
 export const Epitech: ProjectType = {

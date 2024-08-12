@@ -8,7 +8,7 @@ import { SKILLS } from "../constant"
 const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
   return (
     <div className="flex flex-col lg:flex-row w-full my-4">
-      <h2 className="text-2xl mb-8 mt-6 font-medium content-center text-center min-w-48">
+      <h2 className=" text-xl md:text-2xl mb-8 mt-6 font-medium content-center text-center min-w-48">
         {title}
       </h2>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 w-full">
@@ -35,7 +35,7 @@ export const Wrapper = () => {
 
   return (
     <div
-      className={`flex py-32 flex-wrap transition-opacity ease-in duration-700 w-full flex-row ${
+      className={`flex py-16 md:py-24 flex-wrap transition-opacity ease-in duration-700 w-full flex-row ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       ref={ref}
