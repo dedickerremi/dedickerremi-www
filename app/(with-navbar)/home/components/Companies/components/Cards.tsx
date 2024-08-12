@@ -12,7 +12,7 @@ export function Cards({
 }: ProjectType) {
   return (
     <div className={`flex flex-col rounded-md border min-w-96 shadow-xl`}>
-      <div className="relative h-64 w-64 mx-auto">
+      <div className="relative min-h-64 w-64 mx-auto">
         <Image
           className="w-full p-4"
           object-fit="cover"

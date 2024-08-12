@@ -16,7 +16,16 @@ export const DowJones: ProjectType = {
   description:
     "Dow Jones is a financial information service that provides news and data on stock markets.",
   projectLink: "https://www.dowjones.com/",
-  skills: [],
+  skills: [
+    "React",
+    "Redux",
+    "NextJs",
+    "Styled Components",
+    "Storybook",
+    "Test coverage",
+    "Responsive Design",
+    "Agile methodology",
+  ],
   gallery: [
     "https://pbs.twimg.com/profile_images/1280138556535693312/NUO0ZFF0_400x400.jpg",
   ],
@@ -45,7 +54,16 @@ export const Tappx: ProjectType = {
   description:
     "Tappx is an AdTech company that provides solutions for mobile app developers.",
   projectLink: "https://www.tappx.com/",
-  skills: [],
+  skills: [
+    "Migration & Integration",
+    "React",
+    "Redux",
+    "Agile methodology",
+    "Responsive Design",
+    "Strapi CMS",
+    "GraphQL",
+    "PHP",
+  ],
   gallery: ["/tappx.jpg"],
   projects: [],
 }
@@ -55,7 +73,16 @@ export const ReversedDigital: ProjectType = {
   description:
     "Reversed Digital is a digital marketing agency that provides services for businesses.",
   projectLink: "https://reversed.digital/",
-  skills: ["NextJs", "TailwindCSS", "SEO", "Responsive Design", "Ecommerce"],
+  skills: [
+    "NextJs",
+    "TailwindCSS",
+    "SEO",
+    "Responsive Design",
+    "Ecommerce",
+    "Stripe & Adyen",
+    "BullMQ",
+    "PostgreSQL",
+  ],
   gallery: [
     "https://reverseddigital.com/assets/7b2cb684-9775-01b4-a586-c1688bca4a29/fa170b6a-4b33-4cca-9f8f-e89e7404e323/fra%20-%20Case%20Small.png?fm=webp&fit=max&w=1280",
   ],
@@ -85,7 +112,14 @@ export const Epitech: ProjectType = {
   description:
     "Epitech is a private higher education institution that provides courses in computer science.",
   projectLink: "https://www.epitech.eu/",
-  skills: [],
+  skills: [
+    "Fundamentals programming",
+    "Teaching methodologies",
+    "Curriculum development",
+    "Assessment and evaluation",
+    "Web Development",
+    "Code review",
+  ],
   gallery: ["/epitech.png"],
   projects: [],
 }
