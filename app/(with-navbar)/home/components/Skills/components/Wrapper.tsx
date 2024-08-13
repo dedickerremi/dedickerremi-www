@@ -3,7 +3,7 @@
 import { useIsVisible } from "@/lib/hooks/use-is-visible"
 import { useRef } from "react"
 import { Skill } from "../components/Skill"
-import { SKILLS } from "../constant"
+import { SKILLS } from "../skills"
 
 const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
   return (
@@ -13,14 +13,7 @@ const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
       </h2>
       <div className="flex md:flex-row px-8 md:p-0 w-full flex-wrap">
         {skills.map((skill, index) => {
-          return (
-            <Skill
-              key={`key-${index}`}
-              className="flex"
-              skill={skill}
-              isLastSkill={index === skills.length - 1}
-            />
-          )
+          return <Skill key={`key-${index}`} className="flex" skill={skill} />
         })}
       </div>
     </div>
@@ -32,7 +25,7 @@ const dividerCss = "h-1 w-full border-lapisLazuli border-b-2 divide-y"
 export const Wrapper = () => {
   return (
     <div
-      className={`flex pt-16 md:pt-24 flex-wrap transition-opacity ease-in duration-700 w-full flex-row`}
+      className={`flex md:pt-24 flex-wrap transition-opacity ease-in duration-700 w-full flex-row`}
     >
       <section className="flex flex-col container">
         <Display title="Frontend" skills={SKILLS.frontend} />

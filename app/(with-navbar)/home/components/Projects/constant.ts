@@ -12,9 +12,9 @@ export type ProjectType = {
 }
 
 export const DowJones: ProjectType = {
-  name: "Dow Jones - Risk & Compliance",
+  name: "RnC - TC @ Dow Jones",
   description:
-    "Dow Jones is a financial information service that provides news and data on stock markets.",
+    "Risk & Compliance and Trade & Compliance are Dow Jones products that provide solutions for compliance professionals.",
   projectLink: "https://www.dowjones.com/",
   skills: [
     "React",
@@ -30,24 +30,6 @@ export const DowJones: ProjectType = {
   gallery: [
     "https://pbs.twimg.com/profile_images/1280138556535693312/NUO0ZFF0_400x400.jpg",
   ],
-  projects: [
-    {
-      name: "Risk & Compliance",
-      description:
-        "Risk & Compliance is a Dow Jones product that provides solutions for compliance professionals.",
-      projectLink: "https://www.dowjones.com/products/risk-compliance/",
-      skills: [],
-      gallery: [],
-    },
-    {
-      name: "Trade & Compliance",
-      description:
-        "Trade & Compliance is a Dow Jones product that provides solutions for compliance professionals.",
-      projectLink: "https://www.dowjones.com/products/trade-compliance/",
-      skills: [],
-      gallery: [],
-    },
-  ],
 }
 
 export const Tappx: ProjectType = {
@@ -61,6 +43,8 @@ export const Tappx: ProjectType = {
     "Redux",
     "Agile methodology",
     "Responsive Design",
+    "Linear",
+    "fly.io",
     "Strapi CMS",
     "GraphQL",
     "PHP",
@@ -69,43 +53,64 @@ export const Tappx: ProjectType = {
   projects: [],
 }
 
-export const ReversedDigital: ProjectType = {
-  name: "Reversed Digital",
+export const FrankEnergie: ProjectType = {
+  name: "Frank Energy @ Reversed Digital",
   description:
-    "Reversed Digital is a digital marketing agency that provides services for businesses.",
-  projectLink: "https://reversed.digital/",
+    "Frank Energie is a Dutch energy supplier that provides green energy to its customers in Europe.",
+  projectLink: "https://frankenergie.nl/",
   skills: [
     "NextJs",
     "TailwindCSS",
     "SEO",
+    "Sanity CMS",
     "Responsive Design",
+    "Digital Ocean",
     "Ecommerce",
-    "Stripe & Adyen",
+    "Jira / Linear",
     "BullMQ",
     "PostgreSQL",
   ],
   gallery: [
     "https://reverseddigital.com/assets/7b2cb684-9775-01b4-a586-c1688bca4a29/fa170b6a-4b33-4cca-9f8f-e89e7404e323/fra%20-%20Case%20Small.png?fm=webp&fit=max&w=1280",
   ],
-  projects: [
-    {
-      name: "Xpozer.com",
-      description: "Xpozer blabla.",
-      projectLink: "https://xpozer.com/",
-      skills: [],
-      gallery: [],
-    },
-    {
-      name: "Frank Energie",
-      description: "Frank Energie blabla.",
-      projectLink: "frankenergie.nl",
-      skills: [],
-      gallery: [],
-    },
+}
+
+export const Gassan: ProjectType = {
+  name: "Gassan",
+  description:
+    "Gassan is a Dutch company that provides high-quality diamonds and watches.",
+  projectLink: "https://www.gassan.com/",
+  skills: [
+    "React",
+    "NextJs",
+    "TailwindCSS",
+    "Adyen",
+    "Storybook",
+    "Test coverage",
+    "Kontent",
+    "Responsive Design",
+    "Agile methodology",
+    "Domain Driven Design",
   ],
-  theme: {
-    background: "#2FB6D2",
-  },
+  gallery: ["/gassan.jpg"],
+}
+
+export const Xpozer: ProjectType = {
+  name: "Xpozer @ Reversed Digital",
+  description:
+    "Xpozer is a Dutch company that provides solutions for printing photos.",
+  projectLink: "https://xpozer.com/",
+  skills: [
+    "NextJs",
+    "Linaria",
+    "SEO",
+    "Responsive Design",
+    "Ecommerce",
+    "Stripe",
+    "BullMQ",
+    "PostgreSQL",
+  ],
+  gallery: ["/xpozer-logo.png"],
 }
 
 export const Epitech: ProjectType = {
