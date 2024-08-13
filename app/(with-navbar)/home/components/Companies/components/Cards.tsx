@@ -25,7 +25,6 @@ export function Cards({
         <div className="font-bold text-xl mb-2 text-prussianBlue">{name}</div>
         <p className="text-gray-700 text-base ">{description}</p>
       </div>
-      <div></div>
       <div className="px-6 pt-4 pb-2">
         {skills?.map((skill, index) => (
           <span
@@ -40,7 +39,7 @@ export function Cards({
         <Link
           target="_blank"
           href={projectLink}
-          className="px-8 py-2 mb-4 border-2 rounded-full text-white bg-prussianBlue self-center"
+          className="px-8 py-2 mt-4 mb-8 md:mb-0 border-2 rounded-full text-white bg-prussianBlue self-center"
         >
           Visit projects
         </Link>

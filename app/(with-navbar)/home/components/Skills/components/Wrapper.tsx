@@ -7,11 +7,11 @@ import { SKILLS } from "../constant"
 
 const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
   return (
-    <div className="flex flex-col lg:flex-row w-full my-4">
-      <h2 className=" text-xl md:text-2xl mb-8 mt-6 font-medium content-center text-center min-w-48">
+    <div className="flex flex-col md:flex-row w-full my-4">
+      <h2 className="text-xl md:text-2xl mb-8 mt-6 font-medium content-center text-center min-w-48">
         {title}
       </h2>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 w-full">
+      <div className="flex md:flex-row p-8 md:p-0 w-full flex-wrap">
         {skills.map((skill, index) => {
           return (
             <Skill
@@ -45,9 +45,12 @@ export const Wrapper = () => {
         <div className={dividerCss} />
         <Display title="Backend" skills={SKILLS.backend} />
         <div className={dividerCss} />
+        <Display title="ThirdParties" skills={SKILLS.thirdParties} />
+        <div className={dividerCss} />
         <Display title="Database" skills={SKILLS.database} />
         <div className={dividerCss} />
         <Display title="Soft" skills={SKILLS.soft} />
+        <div className={dividerCss} />
       </section>
     </div>
   )

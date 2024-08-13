@@ -41,7 +41,7 @@ export const SKILLS: Record<string, Array<SkillType>> = {
       icon: "HTML",
     },
     {
-      name: "SEO best practices",
+      name: "SEO",
       description: "SEO best practices",
       level: 4,
       icon: "SEO",
@@ -55,6 +55,26 @@ export const SKILLS: Record<string, Array<SkillType>> = {
       name: "Webpack",
       description: "A static module bundler for modern JavaScript applications",
       level: 3,
+    },
+    {
+      name: "Storybook",
+      description: "Storybook",
+      level: 4,
+    },
+    {
+      name: "Styled Components",
+      description: "Styled Components",
+      level: 4,
+    },
+    {
+      name: "Web Accessibility",
+      description: "Web Accessibility",
+      level: 2,
+    },
+    {
+      name: "Jest",
+      description: "Jest",
+      level: 4,
     },
   ],
   backend: [
@@ -70,8 +90,18 @@ export const SKILLS: Record<string, Array<SkillType>> = {
       level: 4,
     },
     {
-      name: "Express / Fastify",
+      name: "Express",
       description: "Fast, unopinionated, minimalist web framework for Node.js",
+      level: 4,
+    },
+    {
+      name: "Fastify",
+      description: "Fast, unopinionated, minimalist web framework for Node.js",
+      level: 4,
+    },
+    {
+      name: "Prisma ORM",
+      description: "Modern Database Access for TypeScript & Node.js",
       level: 4,
     },
     {
@@ -85,8 +115,18 @@ export const SKILLS: Record<string, Array<SkillType>> = {
       level: 4,
     },
     {
+      name: "Integration Testing",
+      description: "Integration Testing",
+      level: 4,
+    },
+    {
       name: "Redis",
       description: "An open-source, in-memory data structure store",
+      level: 4,
+    },
+    {
+      name: "RESTful API",
+      description: "RESTful API",
       level: 4,
     },
   ],
@@ -114,6 +154,11 @@ export const SKILLS: Record<string, Array<SkillType>> = {
       level: 4,
     },
     {
+      name: "CI / CD",
+      description: "CI / CD",
+      level: 4,
+    },
+    {
       name: "Stripe",
       description: "Stripe",
       level: 4,
@@ -126,11 +171,6 @@ export const SKILLS: Record<string, Array<SkillType>> = {
   ],
   soft: [
     {
-      name: "Problem Solving",
-      description: "Problem Solving",
-      level: 4,
-    },
-    {
       name: "Communication",
       description: "Communication",
       level: 4,
@@ -141,8 +181,8 @@ export const SKILLS: Record<string, Array<SkillType>> = {
       level: 4,
     },
     {
-      name: "Time Management",
-      description: "Time Management",
+      name: "Problem Solving",
+      description: "Problem Solving",
       level: 4,
     },
     {

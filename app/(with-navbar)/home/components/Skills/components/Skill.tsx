@@ -10,10 +10,10 @@ export const Skill = ({
   isLastSkill?: boolean
 }) => {
   return (
-    <div
-      className={`rounded-full flex justify-center text-xl mb-2 ${className}`}
+    <span
+      className={`inline-block bg-white border-prussianBlue border-2 rounded-full self-center px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 ${className}`}
     >
-      {skill.name}
-    </div>
+      #{skill.name}
+    </span>
   )
 }
