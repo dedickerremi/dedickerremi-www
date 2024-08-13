@@ -30,15 +30,11 @@ const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
 const dividerCss = "h-1 w-full border-lapisLazuli border-b-2 divide-y"
 
 export const Wrapper = () => {
-  // const ref = useRef(null)
-  // const isVisible = useIsVisible(ref)
-
   return (
     <div
       className={`flex pt-16 md:pt-24 flex-wrap transition-opacity ease-in duration-700 w-full flex-row`}
-      // ref={ref}
     >
-      <section className="flex flex-col w-full">
+      <section className="flex flex-col container">
         <Display title="Frontend" skills={SKILLS.frontend} />
         <div className={dividerCss} />
         <Display title="Backend" skills={SKILLS.backend} />
