@@ -27,7 +27,7 @@ export const Profile = () => {
           </p>
         </div>
       </div>
-      <Links />
+      <Links className={`md:mb-16 mt-16 md:mt-24`} />
     </section>
   )
 }

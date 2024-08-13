@@ -11,7 +11,7 @@ const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
       <h2 className="text-xl md:text-2xl mb-8 mt-6 font-medium content-center text-center min-w-48">
         {title}
       </h2>
-      <div className="flex md:flex-row p-8 md:p-0 w-full flex-wrap">
+      <div className="flex md:flex-row px-8 md:p-0 w-full flex-wrap">
         {skills.map((skill, index) => {
           return (
             <Skill
@@ -30,15 +30,13 @@ const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {
 const dividerCss = "h-1 w-full border-lapisLazuli border-b-2 divide-y"
 
 export const Wrapper = () => {
-  const ref = useRef(null)
-  const isVisible = useIsVisible(ref)
+  // const ref = useRef(null)
+  // const isVisible = useIsVisible(ref)
 
   return (
     <div
-      className={`flex py-16 md:py-24 flex-wrap transition-opacity ease-in duration-700 w-full flex-row ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-      ref={ref}
+      className={`flex pt-16 md:pt-24 flex-wrap transition-opacity ease-in duration-700 w-full flex-row`}
+      // ref={ref}
     >
       <section className="flex flex-col w-full">
         <Display title="Frontend" skills={SKILLS.frontend} />
@@ -50,7 +48,6 @@ export const Wrapper = () => {
         <Display title="Database" skills={SKILLS.database} />
         <div className={dividerCss} />
         <Display title="Soft" skills={SKILLS.soft} />
-        <div className={dividerCss} />
       </section>
     </div>
   )

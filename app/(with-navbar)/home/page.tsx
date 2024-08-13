@@ -3,6 +3,7 @@ import { FloatButtonMenu } from "../../components/ui/FloatButton"
 import { Profile } from "./components/Profile"
 import { Skills } from "./components/Skills"
 import { Companies } from "./components/Companies"
+import { Footer } from "@/app/components/Footer"
 
 export default function Home() {
   return (
