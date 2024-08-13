@@ -39,7 +39,7 @@ export function Cards({
         <Link
           target="_blank"
           href={projectLink}
-          className="px-8 py-2 mt-4 mb-8 md:mb-0 border-2 rounded-full text-white bg-prussianBlue self-center"
+          className="px-8 py-2 mt-4 mb-8 border-2 rounded-full text-white bg-prussianBlue self-center"
         >
           Visit projects
         </Link>

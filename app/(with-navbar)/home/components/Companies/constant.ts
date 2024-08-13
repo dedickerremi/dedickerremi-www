@@ -12,7 +12,7 @@ export type ProjectType = {
 }
 
 export const DowJones: ProjectType = {
-  name: "Dow Jones",
+  name: "Dow Jones - Risk & Compliance",
   description:
     "Dow Jones is a financial information service that provides news and data on stock markets.",
   projectLink: "https://www.dowjones.com/",
@@ -25,6 +25,7 @@ export const DowJones: ProjectType = {
     "Test coverage",
     "Responsive Design",
     "Agile methodology",
+    "Domain Driven Design",
   ],
   gallery: [
     "https://pbs.twimg.com/profile_images/1280138556535693312/NUO0ZFF0_400x400.jpg",
