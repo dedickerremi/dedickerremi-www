@@ -9,6 +9,8 @@ import {
   skRedis,
   skRestfulApi,
   skIntegrationTest,
+  skFlyIo,
+  skDigitalOcean,
 } from "./backendSkills"
 import { skPostgreSQL, skMySQL, skMongoDB } from "./databaseSkills"
 import {
@@ -27,6 +29,7 @@ import {
   skUnitTest,
   skWebAccessibility,
   skSEO,
+  skVercel,
 } from "./frontendSkills"
 import {
   skAgileMethodology,
@@ -65,6 +68,7 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skStyledComponents,
     skWebAccessibility,
     skJest,
+    skVercel,
   ],
   backend: [
     skNodeJs,
@@ -78,6 +82,8 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skIntegrationTest,
     skRedis,
     skRestfulApi,
+    skFlyIo,
+    skDigitalOcean,
   ],
   database: [skPostgreSQL, skMySQL, skMongoDB],
   thirdParties: [

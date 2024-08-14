@@ -104,6 +104,12 @@ export const skUnitTest: SkillType = {
   description: "Unit Testing with Jest",
 }
 
+export const skVercel: SkillType = {
+  name: "Vercel",
+  description: "Vercel",
+  url: "https://vercel.com/",
+}
+
 export const skWebpack: SkillType = {
   name: "Webpack",
   description: "A static module bundler for modern JavaScript applications",

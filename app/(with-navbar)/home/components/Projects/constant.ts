@@ -2,7 +2,10 @@ import { skMigrationIntegration } from "../Skills/skills"
 import {
   skBullMQ,
   skDigitalOcean,
+  skFastify,
   skFlyIo,
+  skIntegrationTest,
+  skNodeJs,
 } from "../Skills/skills/backendSkills"
 import { skPostgreSQL } from "../Skills/skills/databaseSkills"
 import {
@@ -30,7 +33,7 @@ import {
   skTestCoverage,
   skWebDevelopment,
 } from "../Skills/skills/softSkills"
-import { skStripe } from "../Skills/skills/thirdPartiesSkills"
+import { skCookiesBot, skStripe } from "../Skills/skills/thirdPartiesSkills"
 import { skJira, skLinear } from "../Skills/skills/tools"
 import { SkillType } from "../Skills/skills/types"
 
@@ -80,7 +83,6 @@ export const Tappx: ProjectType = {
     skAgileMethodology,
     skResponsiveDesign,
     skJira,
-    skFlyIo,
   ],
   gallery: ["/tappx.jpg"],
   projects: [],
@@ -98,9 +100,12 @@ export const FrankEnergie: ProjectType = {
     skPostgreSQL,
     skSEO,
     skResponsiveDesign,
+    skCodeReview,
     skSanity,
     skDigitalOcean,
     skLinear,
+    skIntegrationTest,
+    skAgileMethodology,
   ],
   gallery: ["/frank-energie.webp"],
 }
@@ -116,6 +121,8 @@ export const Gassan: ProjectType = {
     skTailwindCSS,
     skStorybook,
     skTestCoverage,
+    skNodeJs,
+    skIntegrationTest,
     skResponsiveDesign,
     skAgileMethodology,
   ],
@@ -132,10 +139,15 @@ export const Xpozer: ProjectType = {
     skLinaria,
     skSEO,
     skResponsiveDesign,
-    // "Ecommerce",
     skStripe,
+    skCookiesBot,
+    skCodeReview,
+    skNodeJs,
+    skFastify,
     skBullMQ,
     skPostgreSQL,
+    skFlyIo,
+    skAgileMethodology,
   ],
   gallery: ["/xpozer-logo.png"],
 }

@@ -29,7 +29,7 @@ export const Skill = ({
               target="_blank"
             >
               <h6 className="text-xs">{skill.url} </h6>
-              <Image src="/new-tab.svg" width={16} height={16} alt="link" />
+              <Image src="/new-tab.svg" width={12} height={12} alt="link" />
             </Link>
           )}
         </HoverCardPrimitive.HoverCardContent>
