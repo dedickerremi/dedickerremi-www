@@ -1,5 +1,10 @@
 import { SkillType } from "./types"
 
+export const skDomainDrivenDesign: SkillType = {
+  name: "Domain Driven Design",
+  description: "Domain Driven Design",
+}
+
 export const skGraphQL: SkillType = {
   name: "GraphQL",
   description: "A query language for your API",
@@ -15,6 +20,12 @@ export const skJest: SkillType = {
   name: "Jest",
   description: "Jest",
   url: "https://jestjs.io/",
+}
+
+export const skLinaria: SkillType = {
+  name: "Linaria",
+  description: "Zero-runtime CSS in JS library",
+  url: "https://linaria.dev/",
 }
 
 export const skNextJs: SkillType = {
@@ -39,6 +50,12 @@ export const skRedux: SkillType = {
   name: "Redux",
   description: "A Predictable State Container for JS Apps",
   url: "https://redux.js.org/",
+}
+
+export const skSanity: SkillType = {
+  name: "Sanity",
+  description: "The platform for structured content",
+  url: "https://www.sanity.io/",
 }
 
 export const skStorybook: SkillType = {
@@ -72,7 +89,29 @@ export const skTypeScript: SkillType = {
   url: "https://www.typescriptlang.org/",
 }
 
+export const skResponsiveDesign: SkillType = {
+  name: "Responsive Design",
+  description: "Design that works on all devices",
+}
+
 export const skSEO: SkillType = {
   name: "SEO",
   description: "SEO best practices",
+}
+
+export const skUnitTest: SkillType = {
+  name: "Unit Testing",
+  description: "Unit Testing with Jest",
+}
+
+export const skWebpack: SkillType = {
+  name: "Webpack",
+  description: "A static module bundler for modern JavaScript applications",
+  url: "https://webpack.js.org/",
+}
+
+export const skWebAccessibility: SkillType = {
+  name: "Web Accessibility",
+  description: "Web Accessibility",
+  url: "https://www.w3.org/WAI/",
 }

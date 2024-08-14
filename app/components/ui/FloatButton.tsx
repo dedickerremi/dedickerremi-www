@@ -21,7 +21,7 @@ export const FloatButtonMenu = ({}: FloatButtonMenuType) => {
     <div className="fixed bottom-4 right-4 md:hidden" ref={ref}>
       <div
         onClick={onClickOpenMenu}
-        className={`rounded-full shadow-xl p-0.25 bg-gray-600`}
+        className={`rounded-full shadow-xl p-0.25 bg-gray-600 cursor-pointer`}
       >
         <span className="absolute -inset-1.5"></span>
         <span className="sr-only">Open menu</span>

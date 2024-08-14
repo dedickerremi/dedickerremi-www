@@ -11,6 +11,7 @@ export const Links = ({ className }: LinksProps) => {
         <div className="flex items-center justify-center space-x-8">
           <a
             href="https://www.linkedin.com/in/remi-dedicker"
+            target="_blank"
             className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500 shadow-xl"
           >
             <Image height={16} width={16} src="/linkedin.svg" alt="linked" />
@@ -18,6 +19,7 @@ export const Links = ({ className }: LinksProps) => {
 
           <a
             href="https://github.com/dedickerremi"
+            target="_blank"
             className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500 shadow-xl"
           >
             <Image height={16} width={16} src="/github.svg" alt="github" />

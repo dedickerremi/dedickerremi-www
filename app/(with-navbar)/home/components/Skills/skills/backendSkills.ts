@@ -7,6 +7,12 @@ export const skBullMQ: SkillType = {
   url: "https://docs.bullmq.io/",
 }
 
+export const skDigitalOcean: SkillType = {
+  name: "Digital Ocean",
+  description: "Digital Ocean",
+  url: "https://www.digitalocean.com/",
+}
+
 export const skDocker: SkillType = {
   name: "Docker",
   description: "Docker",
@@ -24,6 +30,17 @@ export const skFastify: SkillType = {
   description:
     "Fastify is a web framework highly focused on providing the best developer experience with the least overhead and a powerful plugin architecture",
   url: "https://www.fastify.io/",
+}
+
+export const skFlyIo: SkillType = {
+  name: "Fly.io",
+  description: "Fly.io",
+  url: "https://fly.io/",
+}
+
+export const skIntegrationTest: SkillType = {
+  name: "Integration Testing",
+  description: "Integration Testing",
 }
 
 export const skNodeJs: SkillType = {
@@ -48,4 +65,9 @@ export const skRedis: SkillType = {
   name: "Redis",
   description: "Redis",
   url: "https://redis.io/",
+}
+
+export const skRestfulApi: SkillType = {
+  name: "RESTful API",
+  description: "RESTful API",
 }

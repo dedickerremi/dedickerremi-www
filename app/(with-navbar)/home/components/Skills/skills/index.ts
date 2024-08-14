@@ -7,6 +7,8 @@ import {
   skDocker,
   skPothos,
   skRedis,
+  skRestfulApi,
+  skIntegrationTest,
 } from "./backendSkills"
 import { skPostgreSQL, skMySQL, skMongoDB } from "./databaseSkills"
 import {
@@ -20,6 +22,11 @@ import {
   skStyledComponents,
   skJest,
   skGraphQL,
+  skWebpack,
+  skResponsiveDesign,
+  skUnitTest,
+  skWebAccessibility,
+  skSEO,
 } from "./frontendSkills"
 import {
   skAgileMethodology,
@@ -34,6 +41,7 @@ import {
   skGoogleTagManager,
   skStripe,
 } from "./thirdPartiesSkills"
+import { skJira, skLinear } from "./tools"
 import { SkillType } from "./types"
 
 export const skMigrationIntegration: SkillType = {
@@ -47,30 +55,15 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skNextJs,
     skReactQuery,
     skTypeScript,
-    {
-      name: "Unit Testing",
-      description: "Unit Testing",
-    },
+    skUnitTest,
     skTailwindCSS,
     skHtmlSemantic,
-    {
-      name: "SEO",
-      description: "SEO best practices",
-    },
-    {
-      name: "Responsive Design",
-      description: "Design that works on all devices",
-    },
-    {
-      name: "Webpack",
-      description: "A static module bundler for modern JavaScript applications",
-    },
+    skSEO,
+    skResponsiveDesign,
+    skWebpack,
     skStorybook,
     skStyledComponents,
-    {
-      name: "Web Accessibility",
-      description: "Web Accessibility",
-    },
+    skWebAccessibility,
     skJest,
   ],
   backend: [
@@ -82,15 +75,9 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skGraphQL,
     skDocker,
     skPothos,
-    {
-      name: "Integration Testing",
-      description: "Integration Testing",
-    },
+    skIntegrationTest,
     skRedis,
-    {
-      name: "RESTful API",
-      description: "RESTful API",
-    },
+    skRestfulApi,
   ],
   database: [skPostgreSQL, skMySQL, skMongoDB],
   thirdParties: [
@@ -101,4 +88,5 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skAWS,
   ],
   soft: [skCommunication, skTeamwork, skProblemSolving, skAgileMethodology],
+  tools: [skLinear, skJira],
 }

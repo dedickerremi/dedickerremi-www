@@ -5,19 +5,9 @@ export const skTestCoverage: SkillType = {
   description: "Test Coverage",
 }
 
-export const skResponsiveDesign: SkillType = {
-  name: "Responsive Design",
-  description: "Design that works on all devices",
-}
-
 export const skAgileMethodology: SkillType = {
   name: "Agile Methodology",
   description: "Agile Methodology",
-}
-
-export const skDomainDrivenDesign: SkillType = {
-  name: "Domain Driven Design",
-  description: "Domain Driven Design",
 }
 
 export const skCommunication: SkillType = {
