@@ -22,6 +22,12 @@ import {
   skGraphQL,
 } from "./frontendSkills"
 import {
+  skAgileMethodology,
+  skCommunication,
+  skProblemSolving,
+  skTeamwork,
+} from "./softSkills"
+import {
   skAWS,
   skCICD,
   skGoogleAnalytics,
@@ -29,6 +35,11 @@ import {
   skStripe,
 } from "./thirdPartiesSkills"
 import { SkillType } from "./types"
+
+export const skMigrationIntegration: SkillType = {
+  name: "Migration & Integration",
+  description: "Migration & Integration",
+}
 
 export const SKILLS: Record<string, Array<SkillType>> = {
   frontend: [
@@ -89,22 +100,5 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skStripe,
     skAWS,
   ],
-  soft: [
-    {
-      name: "Communication",
-      description: "Communication",
-    },
-    {
-      name: "Teamwork",
-      description: "Teamwork",
-    },
-    {
-      name: "Problem Solving",
-      description: "Problem Solving",
-    },
-    {
-      name: "Agile Methodologies",
-      description: "Agile Methodologies",
-    },
-  ],
+  soft: [skCommunication, skTeamwork, skProblemSolving, skAgileMethodology],
 }

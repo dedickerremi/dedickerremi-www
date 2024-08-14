@@ -19,7 +19,7 @@ export const Skill = ({
         <HoverCardPrimitive.HoverCardTrigger>
           #{skill.name}
         </HoverCardPrimitive.HoverCardTrigger>
-        <HoverCardPrimitive.HoverCardContent className="flex flex-col w-max-60 border-2 rounded-lg border-prussianBlue bg-white text-prussianBlue p-4 mt-2 rounded-sm text-sm">
+        <HoverCardPrimitive.HoverCardContent className="flex flex-col w-max-60 border-2 border-prussianBlue bg-white text-prussianBlue p-4 mt-2 rounded-2xl text-sm">
           {skill.description}
 
           {skill.url && (

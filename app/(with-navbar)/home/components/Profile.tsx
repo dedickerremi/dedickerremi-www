@@ -10,7 +10,7 @@ export const Profile = () => {
             <Image
               width={260}
               height={260}
-              className=" rounded-full ci"
+              className="rounded-full ci"
               src="/home-img.jpeg"
               alt="Image"
             />

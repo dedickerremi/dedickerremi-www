@@ -71,3 +71,8 @@ export const skTypeScript: SkillType = {
   description: "Typed JavaScript at Any Scale",
   url: "https://www.typescriptlang.org/",
 }
+
+export const skSEO: SkillType = {
+  name: "SEO",
+  description: "SEO best practices",
+}

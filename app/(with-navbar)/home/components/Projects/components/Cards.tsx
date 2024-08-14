@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { ProjectType } from "../constant"
 import Link from "next/link"
+import { Skill } from "../../Skills/components/Skill"
 
 export function Cards({
   name,
@@ -8,7 +9,6 @@ export function Cards({
   gallery,
   skills,
   projectLink,
-  theme,
 }: ProjectType) {
   return (
     <div className={`flex flex-col rounded-md border md:min-w-96 shadow-xl`}>
@@ -27,12 +27,13 @@ export function Cards({
       </div>
       <div className="px-6 pt-4 pb-2">
         {skills?.map((skill, index) => (
-          <span
+          <Skill
             key={`${name}-skills-${index}`}
+            skill={skill}
             className="inline-block bg-white border-prussianBlue border-2 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-          >
-            #{skill}
-          </span>
+          />
+          //   #{skill.name}
+          // </Ski>
         ))}
       </div>
       {projectLink && (
