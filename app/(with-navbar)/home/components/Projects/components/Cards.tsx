@@ -19,7 +19,7 @@ export function Cards({
           className="w-full p-4"
           object-fit="contain"
           src={gallery?.[0]}
-          alt="Sunset in the mountains"
+          alt={`${name}-image`}
           fill={true}
         />
       </div>
