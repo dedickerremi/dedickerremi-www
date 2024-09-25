@@ -2,7 +2,7 @@
 
 import { useIsVisible } from "@/lib/hooks/use-is-visible"
 import { useRef } from "react"
-import { Skill } from "../components/Skill"
+import { Skill } from "./Skill"
 import { SKILLS } from "../skills"
 
 const Display = ({ title, skills }: { title: string; skills: Array<any> }) => {

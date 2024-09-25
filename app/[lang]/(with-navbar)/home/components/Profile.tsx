@@ -1,7 +1,12 @@
 import { Links } from "@/app/components/Links"
+import { Dictionary } from "@/lib/dictionaries/dictionaries"
 import Image from "next/image"
 
-export const Profile = () => {
+type ProfileType = {
+  dict: Dictionary["homepage"]
+}
+
+export function Profile({ dict }: ProfileType) {
   return (
     <section className="h-[calc(100vh_-_90px)] place-content-center">
       <div className="container max-w-screen-xl mx-auto px-4">
@@ -17,13 +22,11 @@ export const Profile = () => {
           </div>
 
           <h1 className="font-normal text-prussianBlue text-2xl md:text-4xl leading-none mb-8">
-            Senior Fullstack Developer
+            {dict.jobPosition}
           </h1>
 
           <p className="font-normal text-prussianBlue text-md md:text-xl">
-            Crafting seamless digital experiences from code to cloud, I'm your
-            go-to Fullstack Developer for scalable solutions and innovative
-            designs.
+            {dict.headline}
           </p>
         </div>
       </div>
