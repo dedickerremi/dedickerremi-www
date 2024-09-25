@@ -12,9 +12,7 @@ export const Skill = ({
   isLastSkill?: boolean
 }) => {
   return (
-    <span
-      className={`cursor-pointer inline-block bg-white border-prussianBlue border-2 rounded-full self-center px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 ${className}`}
-    >
+    <span className="bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full border border-gray-300">
       <HoverCardPrimitive.HoverCard>
         <HoverCardPrimitive.HoverCardTrigger>
           #{skill.name}
