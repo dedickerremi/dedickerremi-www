@@ -41,13 +41,9 @@ export type ProjectType = {
   name: string
   description: string
   projectLink: string
-  skills: Array<SkillType>
-  gallery: Array<string>
-  projects?: Array<ProjectType>
-  url?: string
-  theme?: {
-    background?: string
-  }
+  skills: SkillType[]
+  gallery: string[]
+  position: string
 }
 
 export const DowJones: ProjectType = {
@@ -67,6 +63,7 @@ export const DowJones: ProjectType = {
     skDomainDrivenDesign,
   ],
   gallery: ["/dowjones.jpg"],
+  position: "",
 }
 
 export const Tappx: ProjectType = {
@@ -85,7 +82,7 @@ export const Tappx: ProjectType = {
     skJira,
   ],
   gallery: ["/tappx.jpg"],
-  projects: [],
+  position: "",
 }
 
 export const FrankEnergie: ProjectType = {
@@ -108,6 +105,7 @@ export const FrankEnergie: ProjectType = {
     skAgileMethodology,
   ],
   gallery: ["/frank-energie.webp"],
+  position: "",
 }
 
 export const Gassan: ProjectType = {
@@ -127,6 +125,7 @@ export const Gassan: ProjectType = {
     skAgileMethodology,
   ],
   gallery: ["/gassan.jpg"],
+  position: "",
 }
 
 export const Xpozer: ProjectType = {
@@ -150,6 +149,7 @@ export const Xpozer: ProjectType = {
     skAgileMethodology,
   ],
   gallery: ["/xpozer-logo.png"],
+  position: "",
 }
 
 export const Epitech: ProjectType = {
@@ -166,5 +166,5 @@ export const Epitech: ProjectType = {
     skCodeReview,
   ],
   gallery: ["/epitech.png"],
-  projects: [],
+  position: "",
 }

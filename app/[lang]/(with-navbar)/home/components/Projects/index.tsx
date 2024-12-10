@@ -1,35 +1,64 @@
+"use client"
+
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 import { Cards } from "./components/Cards"
 import { DowJones, Epitech, FrankEnergie, Tappx, Xpozer } from "./constant"
 
 export function Projects() {
-  return (
-    <section className="py-16 sm:py-24 relative overflow-hidden">
-      {/* Arrière-plan décoratif */}
-      <div className="absolute inset-0 bg-gradient-to-tl from-prussianBlue/5 to-transparent" />
+  const containerRef = useRef(null)
+  const isInView = useInView(containerRef, { once: true, margin: "-100px" })
 
-      <div className="container max-w-screen-xl mx-auto px-4">
-        <div className="text-center mb-12 relative">
+  const projects = [FrankEnergie, Xpozer, DowJones, Tappx, Epitech]
+
+  return (
+    <section
+      ref={containerRef}
+      className="py-16 sm:py-24 relative overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-prussianBlue/5 to-transparent" />
+
+      <div className="container max-w-screen-xl mx-auto px-4 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <h2 className="text-sm uppercase tracking-wider text-prussianBlue/70 mb-4">
             Experience
           </h2>
           <h3 className="text-2xl md:text-4xl font-medium text-prussianBlue">
             My Projects
           </h3>
+        </motion.div>
+
+        {/* Desktop Grid Layout */}
+        <div className="hidden lg:grid grid-cols-2 xl:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Cards {...project} variant="desktop" />
+            </motion.div>
+          ))}
         </div>
 
-        <div className="relative">
-          {/* Indicateurs de défilement sur desktop */}
-          <div className="hidden lg:block absolute -left-4 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="hidden lg:block absolute -right-4 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10" />
-
-          {/* Container des cartes */}
-          <div className="flex flex-col lg:flex-row gap-8 pb-8 overflow-x-auto hide-scrollbar">
-            <Cards {...FrankEnergie} />
-            <Cards {...Xpozer} />
-            <Cards {...DowJones} />
-            <Cards {...Tappx} />
-            <Cards {...Epitech} />
-          </div>
+        {/* Mobile List Layout */}
+        <div className="lg:hidden space-y-4">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.name}
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Cards {...project} variant="mobile" />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
