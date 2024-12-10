@@ -32,11 +32,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  console.info("lala")
-  console.info("children", children)
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-neutral-100`}>{children}</body>
+      <body className={`${inter.className}`}>{children}</body>
       <GoogleAnalytics gaId="G-EJMZL9Z45F" />
     </html>
   )

@@ -14,9 +14,9 @@ export function Projects() {
   return (
     <section
       ref={containerRef}
-      className="py-16 sm:py-24 relative overflow-hidden"
+      className="py-16 sm:py-24 relative overflow-hidden bg-white"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-prussianBlue/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-prussianBlue/[0.02] to-transparent" />
 
       <div className="container max-w-screen-xl mx-auto px-4 relative">
         <motion.div

@@ -39,52 +39,48 @@ export function Profile({ dict }: ProfileType) {
   return (
     <section
       ref={containerRef}
-      className="min-h-[calc(100vh_-_90px)] relative overflow-hidden"
+      className="min-h-[calc(100vh_-_90px)] relative overflow-hidden flex items-center bg-white"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-prussianBlue/5 to-transparent" />
+      {/* Background gradient plus subtil */}
+      <div className="absolute inset-0 bg-gradient-to-br from-prussianBlue/[0.02] to-transparent" />
 
-      <div className="absolute inset-0 flex items-center">
-        <div className="container max-w-screen-xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Colonne image */}
-            <div ref={imageRef} className="relative order-1 lg:order-none">
-              <div className="relative z-10 max-w-[320px] md:max-w-[400px] mx-auto">
-                <div className="relative group">
-                  <Image
-                    width={400}
-                    height={400}
-                    className="rounded-2xl shadow-xl transition-all duration-500
-                      group-hover:shadow-2xl group-hover:scale-[1.02]"
-                    src="/home-img.jpeg"
-                    alt="Profile Image"
-                    priority
-                    style={{ objectFit: "cover" }}
-                  />
-                  <div
-                    className="absolute -z-10 -bottom-6 -right-6 w-full h-full 
-                    border-2 border-prussianBlue/20 rounded-2xl transition-all duration-500
-                    group-hover:-bottom-4 group-hover:-right-4"
-                  />
-                </div>
+      {/* Content container */}
+      <div className="container max-w-screen-xl mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Image column */}
+          <div ref={imageRef} className="relative order-1 lg:order-none">
+            <div className="relative z-10 max-w-[320px] md:max-w-[400px] mx-auto">
+              <div className="relative group">
+                <Image
+                  width={400}
+                  height={400}
+                  className="rounded-2xl shadow-xl transition-all duration-500
+                    group-hover:shadow-2xl group-hover:scale-[1.02]"
+                  src="/home-img.jpeg"
+                  alt="Profile Image"
+                  priority
+                />
+                <div
+                  className="absolute -z-10 -bottom-6 -right-6 w-full h-full 
+                  border-2 border-prussianBlue/20 rounded-2xl transition-all duration-500
+                  group-hover:-bottom-4 group-hover:-right-4"
+                />
               </div>
             </div>
+          </div>
 
-            {/* Colonne contenu */}
-            <div
-              ref={contentRef}
-              className="text-center lg:text-left space-y-6"
-            >
-              <h2 className="text-sm uppercase tracking-wider text-prussianBlue/70">
-                Welcome
-              </h2>
-              <h1 className="font-normal text-prussianBlue text-3xl md:text-5xl leading-tight">
-                {dict.jobPosition}
-              </h1>
-              <p className="font-light text-prussianBlue/90 text-lg md:text-xl leading-relaxed">
-                {dict.headline}
-              </p>
-              <Links className="mt-8" />
-            </div>
+          {/* Content column */}
+          <div ref={contentRef} className="text-center lg:text-left space-y-6">
+            <h2 className="text-sm uppercase tracking-wider text-prussianBlue/70">
+              Welcome
+            </h2>
+            <h1 className="font-normal text-prussianBlue text-3xl md:text-5xl leading-tight">
+              {dict.jobPosition}
+            </h1>
+            <p className="font-light text-prussianBlue/90 text-lg md:text-xl leading-relaxed">
+              {dict.headline}
+            </p>
+            <Links className="mt-8" />
           </div>
         </div>
       </div>
