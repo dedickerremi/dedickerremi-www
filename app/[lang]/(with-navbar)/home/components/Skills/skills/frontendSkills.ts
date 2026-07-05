@@ -121,3 +121,9 @@ export const skWebAccessibility: SkillType = {
   description: "Web Accessibility",
   url: "https://www.w3.org/WAI/",
 }
+
+export const skCanvasAPI: SkillType = {
+  name: "Canvas API",
+  description: "HTML5 2D drawing API, used for real-time game rendering",
+  url: "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+}

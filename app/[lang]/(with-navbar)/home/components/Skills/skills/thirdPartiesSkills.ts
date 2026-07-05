@@ -35,3 +35,9 @@ export const skStripe: SkillType = {
   description: "Stripe",
   url: "https://stripe.com/",
 }
+
+export const skClerk: SkillType = {
+  name: "Clerk",
+  description: "Authentication and user management platform",
+  url: "https://clerk.com/",
+}

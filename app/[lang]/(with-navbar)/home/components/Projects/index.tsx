@@ -1,6 +1,12 @@
 import { Cards } from "./components/Cards"
-import { CardsBis } from "./components/CardsBis"
-import { DowJones, Epitech, FrankEnergie, Tappx, Xpozer } from "./constant"
+import {
+  DowJones,
+  Epitech,
+  FrankEnergie,
+  SpaceInvadersCoop,
+  Tappx,
+  Xpozer,
+} from "./constant"
 
 export function Projects() {
   return (
@@ -10,11 +16,12 @@ export function Projects() {
       </div>
 
       <div className="px-6 md:px-0 mt-8 flex flex-col md:flex-row md:overflow-x-auto md:hover:overflow-x-scroll gap-8 pb-8">
-        <CardsBis {...FrankEnergie} />
-        <CardsBis {...Xpozer} />
-        <CardsBis {...DowJones} />
-        <CardsBis {...Tappx} />
-        <CardsBis {...Epitech} />
+        <Cards {...SpaceInvadersCoop} />
+        <Cards {...FrankEnergie} />
+        <Cards {...Xpozer} />
+        <Cards {...DowJones} />
+        <Cards {...Tappx} />
+        <Cards {...Epitech} />
       </div>
     </section>
   )

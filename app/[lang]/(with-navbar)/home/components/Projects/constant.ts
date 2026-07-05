@@ -4,11 +4,14 @@ import {
   skDigitalOcean,
   skFastify,
   skFlyIo,
+  skGolang,
   skIntegrationTest,
   skNodeJs,
+  skWebSockets,
 } from "../Skills/skills/backendSkills"
 import { skPostgreSQL } from "../Skills/skills/databaseSkills"
 import {
+  skCanvasAPI,
   skDomainDrivenDesign,
   skGraphQL,
   skLinaria,
@@ -33,7 +36,7 @@ import {
   skTestCoverage,
   skWebDevelopment,
 } from "../Skills/skills/softSkills"
-import { skCookiesBot, skStripe } from "../Skills/skills/thirdPartiesSkills"
+import { skClerk, skCookiesBot, skStripe } from "../Skills/skills/thirdPartiesSkills"
 import { skJira, skLinear } from "../Skills/skills/tools"
 import { SkillType } from "../Skills/skills/types"
 
@@ -48,6 +51,24 @@ export type ProjectType = {
   theme?: {
     background?: string
   }
+}
+
+export const SpaceInvadersCoop: ProjectType = {
+  name: "Space Invaders Co-op — side project",
+  description:
+    "Real-time cooperative Space Invaders playable in the browser: server-authoritative Go backend, WebSocket matchmaking and sync, Canvas rendering with client-side prediction, on desktop and mobile.",
+  projectLink: "https://space-invader-coop-www.vercel.app",
+  skills: [
+    skGolang,
+    skWebSockets,
+    skCanvasAPI,
+    skNextJs,
+    skReact,
+    skFlyIo,
+    skClerk,
+    skResponsiveDesign,
+  ],
+  gallery: ["/space-invaders.png"],
 }
 
 export const DowJones: ProjectType = {
