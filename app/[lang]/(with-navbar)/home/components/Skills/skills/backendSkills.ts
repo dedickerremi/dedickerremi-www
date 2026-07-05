@@ -71,3 +71,15 @@ export const skRestfulApi: SkillType = {
   name: "RESTful API",
   description: "RESTful API",
 }
+
+export const skGolang: SkillType = {
+  name: "Go",
+  description: "Compiled language by Google, used for high-performance servers",
+  url: "https://go.dev/",
+}
+
+export const skWebSockets: SkillType = {
+  name: "WebSockets",
+  description: "Full-duplex protocol for real-time client/server communication",
+  url: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+}
