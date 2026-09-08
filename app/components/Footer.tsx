@@ -1,23 +1,40 @@
+import { CountryCode, getDictionary } from "@/lib/dictionaries/dictionaries"
+import { Settings } from "@/settings"
+import Link from "next/link"
 import { Links } from "./Links"
 
-export function Footer() {
+/** Slim closer. The real call to action lives in the About section, up top. */
+export async function Footer({ lang }: { lang: CountryCode }) {
+  const dict = await getDictionary(lang)
+
   return (
-    <footer className="relative bg-blueGray-200 pb-6 mt-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap text-left lg:text-left">
-          <div className="w-full px-4">
-            <h5 className=" text-xl md:text-2xl font-semibold text-prussianBlue text-center">
-              Let's keep in touch!
-            </h5>
-            <Links className="mt-4" />
+    <footer className="border-t border-rule bg-paper-raised/60">
+      <div className="shell py-12">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Link
+              href={Settings.urls.CV}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 font-mono text-label uppercase text-ink transition-colors duration-300 ease-editorial hover:text-accent"
+            >
+              {dict.header.downloadCV}
+              <span
+                aria-hidden
+                className="inline-block transition-transform duration-300 ease-editorial group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              >
+                ↗
+              </span>
+            </Link>
+            <Links />
           </div>
-        </div>
-        <hr className="my-6 border-blueGray-300" />
-        <div className="flex flex-wrap items-center md:justify-between justify-center">
-          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div className="text-sm text-prussianBlue font-semibold py-1">
-              Copyright © <span id="get-current-year">2024</span>
-            </div>
+
+          <div className="flex flex-col gap-1 font-mono text-label uppercase text-ink-faint md:items-end">
+            <span>
+              © {new Date().getFullYear()} Rémi Dedicker ·{" "}
+              {dict.contact.rights}
+            </span>
+            <span>{dict.contact.builtWith}</span>
           </div>
         </div>
       </div>

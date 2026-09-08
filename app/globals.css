@@ -2,32 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  body {
+    @apply bg-paper text-ink font-sans text-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent text-paper;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-paper;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+@layer components {
+  /* Scroll reveal. Only `html.js` hides anything, so a visitor without
+     JavaScript sees the finished page rather than blank sections. */
+  .js .reveal {
+    @apply translate-y-2 opacity-0;
+    transition-property: opacity, transform;
+    transition-duration: 700ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .js .reveal.is-visible {
+    @apply translate-y-0 opacity-100;
+  }
+
+  /* One shell primitive, replacing the ad hoc container/max-w/px repetition. */
+  .shell {
+    @apply mx-auto w-full max-w-shell px-6 md:px-10 lg:px-16;
+  }
+
+  .eyebrow {
+    @apply font-mono text-label uppercase text-ink-faint;
+  }
+
+  /* Link that draws its own baseline rule, print-style. */
+  .link-rule {
+    @apply relative inline-block text-ink no-underline transition-colors duration-300 ease-editorial hover:text-accent;
+  }
+  .link-rule::after {
+    @apply absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-100 bg-rule transition-all duration-300 ease-editorial content-[''];
+  }
+  .link-rule:hover::after {
+    @apply bg-accent;
+  }
+}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

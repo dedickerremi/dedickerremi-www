@@ -1,4 +1,4 @@
-import { skMigrationIntegration } from "../Skills/skills"
+import { skMigrationIntegration } from "../Skills/skills";
 import {
   skBullMQ,
   skDigitalOcean,
@@ -6,11 +6,12 @@ import {
   skFlyIo,
   skIntegrationTest,
   skNodeJs,
-} from "../Skills/skills/backendSkills"
-import { skPostgreSQL } from "../Skills/skills/databaseSkills"
+} from "../Skills/skills/backendSkills";
+import { skPostgreSQL } from "../Skills/skills/databaseSkills";
 import {
   skDomainDrivenDesign,
   skGraphQL,
+  skFigma,
   skLinaria,
   skNextJs,
   skReact,
@@ -22,36 +23,43 @@ import {
   skStrapi,
   skStyledComponents,
   skTailwindCSS,
-} from "../Skills/skills/frontendSkills"
+} from "../Skills/skills/frontendSkills";
 import {
   skAgileMethodology,
-  skAssessmentAndEvaluation,
   skCodeReview,
-  skCurriculumDevelopment,
-  skFundamentalsProgramming,
-  skTeachingMethodologies,
   skTestCoverage,
-  skWebDevelopment,
-} from "../Skills/skills/softSkills"
-import { skCookiesBot, skStripe } from "../Skills/skills/thirdPartiesSkills"
-import { skJira, skLinear } from "../Skills/skills/tools"
-import { SkillType } from "../Skills/skills/types"
+} from "../Skills/skills/softSkills";
+import {
+  skCookiesBot,
+  skGoogleAnalytics,
+  skStripe,
+} from "../Skills/skills/thirdPartiesSkills";
+import { skJira, skLinear } from "../Skills/skills/tools";
+import { SkillType } from "../Skills/skills/types";
 
 export type ProjectType = {
-  name: string
-  description: string
-  projectLink: string
-  skills: Array<SkillType>
-  gallery: Array<string>
-  projects?: Array<ProjectType>
-  url?: string
+  name: string;
+  /** The client or employer the work was done for. */
+  company?: string;
+  /** What was actually built. This is what the row leads with. */
+  contribution?: string;
+  /** One line of context about the client. Secondary. */
+  description: string;
+  projectLink: string;
+  skills: Array<SkillType>;
+  gallery: Array<string>;
+  projects?: Array<ProjectType>;
+  url?: string;
   theme?: {
-    background?: string
-  }
-}
+    background?: string;
+  };
+};
 
 export const DowJones: ProjectType = {
-  name: "RnC - TC @ Dow Jones",
+  name: "Risk & Compliance / Trade & Compliance",
+  company: "Dow Jones",
+  contribution:
+    "Migrated legacy applications to Next.js, measurably improving performance and maintainability. Instituted business-specific packages to centralise shared code, cutting bugs and shrinking app size across several applications.",
   description:
     "Risk & Compliance and Trade & Compliance are Dow Jones products that provide solutions for compliance professionals.",
   projectLink: "https://www.dowjones.com/professional/factiva/",
@@ -67,10 +75,13 @@ export const DowJones: ProjectType = {
     skDomainDrivenDesign,
   ],
   gallery: ["/dowjones.jpg"],
-}
+};
 
 export const Tappx: ProjectType = {
   name: "Tappx",
+  company: "Tappx",
+  contribution:
+    "The professional dashboard and marketing platform for mobile app developers, rebuilt on Next.js with Strapi for content management and Tailwind for a pixel-perfect UI.",
   description:
     "Tappx is an AdTech company that provides solutions for mobile app developers.",
   projectLink: "https://www.tappx.com/",
@@ -79,6 +90,9 @@ export const Tappx: ProjectType = {
     skReact,
     skRedux,
     skStrapi,
+    skTailwindCSS,
+    skFigma,
+    skSEO,
     skGraphQL,
     skAgileMethodology,
     skResponsiveDesign,
@@ -86,10 +100,13 @@ export const Tappx: ProjectType = {
   ],
   gallery: ["/tappx.jpg"],
   projects: [],
-}
+};
 
 export const FrankEnergie: ProjectType = {
-  name: "Frank Energy @ Reversed Digital",
+  name: "Frank Energie",
+  company: "Frank Energie · Reversed Digital",
+  contribution:
+    "Adapted the existing frontend to handle country-specific variations, opening user registration to new markets. Led a cache-driven optimisation pass that streamlined backend operations and unified diverse endpoints behind country-specific services.",
   description:
     "Frank Energie is a Dutch energy supplier that provides green energy to its customers in Europe.",
   projectLink: "https://reverseddigital.com/cases/frank-energie",
@@ -108,10 +125,13 @@ export const FrankEnergie: ProjectType = {
     skAgileMethodology,
   ],
   gallery: ["/frank-energie.webp"],
-}
+};
 
 export const Gassan: ProjectType = {
   name: "Gassan",
+  company: "Gassan · Reversed Digital",
+  contribution:
+    "A Next.js and Tailwind front-end with a Storybook component library, Node.js back-end and integration test coverage.",
   description:
     "Gassan is a Dutch company that provides high-quality diamonds and watches.",
   projectLink: "https://reverseddigital.com/cases/gassan",
@@ -127,17 +147,23 @@ export const Gassan: ProjectType = {
     skAgileMethodology,
   ],
   gallery: ["/gassan.jpg"],
-}
+};
 
 export const Xpozer: ProjectType = {
-  name: "Xpozer @ Reversed Digital",
+  name: "Xpozer",
+  company: "Xpozer · Reversed Digital",
+  contribution:
+    "Built and improved the storefront from Figma designs using a headless CMS, GraphQL, SEO best practices and Google Analytics. Developed the backend integrating third-party payment gateways and orchestrating synchronisation of critical data across platforms.",
   description:
     "Xpozer is a company that offers a unique solution for printing and displaying photos on walls.",
   projectLink: "https://reverseddigital.com/cases/xpozer",
   skills: [
     skNextJs,
+    skFigma,
     skLinaria,
     skSEO,
+    skGraphQL,
+    skGoogleAnalytics,
     skResponsiveDesign,
     skStripe,
     skCookiesBot,
@@ -150,21 +176,4 @@ export const Xpozer: ProjectType = {
     skAgileMethodology,
   ],
   gallery: ["/xpozer-logo.png"],
-}
-
-export const Epitech: ProjectType = {
-  name: "Lead Professor for MSc program @ Epitech",
-  description:
-    "Epitech is a private higher education institution that provides courses in computer science.",
-  projectLink: "https://www.epitech.eu/",
-  skills: [
-    skFundamentalsProgramming,
-    skTeachingMethodologies,
-    skCurriculumDevelopment,
-    skAssessmentAndEvaluation,
-    skWebDevelopment,
-    skCodeReview,
-  ],
-  gallery: ["/epitech.png"],
-  projects: [],
-}
+};

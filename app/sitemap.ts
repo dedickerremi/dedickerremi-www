@@ -1,12 +1,15 @@
 import { MetadataRoute } from "next"
 
+const SITE_URL = "https://dedickerremi.com"
+const LOCALES = ["en", "fr"]
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://remidedicker.com",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-  ]
+  const lastModified = new Date()
+
+  return LOCALES.map((lang) => ({
+    url: `${SITE_URL}/${lang}/home`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: lang === "en" ? 1 : 0.8,
+  }))
 }

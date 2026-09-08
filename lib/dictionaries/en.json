@@ -1,9 +1,58 @@
 {
   "homepage": {
-    "jobPosition": "Senior Fullstack Developer",
-    "headline": "Crafting seamless digital experiences from code to cloud, I'm your go-to Fullstack Developer for scalable solutions and innovative designs."
+    "jobPosition": "Senior Software Engineer",
+    "headline": "I build scalable, high-impact web platforms across e-commerce, SaaS and media, designing resilient architectures and backend services that scale across regions and teams.",
+    "location": "Based in Amsterdam"
+  },
+  "facts": {
+    "location": "Based in",
+    "experience": "Experience",
+    "focus": "Focus",
+    "education": "Education",
+    "languages": "Languages",
+    "availability": "Availability"
   },
   "header": {
-    "downloadCV": "See my CV"
+    "downloadCV": "See my CV",
+    "menu": "Menu"
+  },
+  "nav": {
+    "experience": "Experience",
+    "skills": "Stack",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "work": {
+    "viewProject": "View project",
+    "stack": "Stack"
+  },
+  "experience": {
+    "title": "Experience",
+    "standfirst": "Where I have worked, what I was responsible for, and what shipped there.",
+    "shipped": "Shipped there",
+    "highlights": "Highlights"
+  },
+  "skills": {
+    "title": "Craft & tooling",
+    "standfirst": "Everything I work with, grouped by layer and ordered by how often I reach for it.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "thirdParties": "Platform & third parties",
+      "soft": "Ways of working"
+    }
+  },
+  "contact": {
+    "title": "Let's build something",
+    "standfirst": "Open to senior fullstack roles and selected freelance work. Email is the fastest way to reach me.",
+    "emailCta": "Email me",
+    "rights": "All rights reserved",
+    "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+  "about": {
+    "title": "About",
+    "standfirst": "",
+    "education": "Education"
   }
 }

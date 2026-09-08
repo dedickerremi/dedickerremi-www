@@ -121,3 +121,15 @@ export const skWebAccessibility: SkillType = {
   description: "Web Accessibility",
   url: "https://www.w3.org/WAI/",
 }
+
+export const skZustand: SkillType = {
+  name: "Zustand",
+  description: "Small, fast and scalable state management for React",
+  url: "https://zustand.docs.pmnd.rs/",
+}
+
+export const skFigma: SkillType = {
+  name: "Figma",
+  description: "Design handoff and collaboration",
+  url: "https://www.figma.com/",
+}
