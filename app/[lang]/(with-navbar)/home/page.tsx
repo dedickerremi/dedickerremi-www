@@ -1,10 +1,8 @@
-import Image from "next/image"
-import { FloatButtonMenu } from "../../../components/ui/FloatButton"
+import { CountryCode, getDictionary } from "@/lib/dictionaries/dictionaries"
+import { About } from "./components/About"
+import { Experience } from "./components/Experience"
 import { Profile } from "./components/Profile"
 import { Skills } from "./components/Skills"
-import { Projects } from "./components/Projects"
-import { Footer } from "@/app/components/Footer"
-import { CountryCode, getDictionary } from "@/lib/dictionaries/dictionaries"
 
 type PageParams = {
   params: {
@@ -13,14 +11,22 @@ type PageParams = {
 }
 
 export default async function Home({ params }: PageParams) {
-  // console.info("props", props)
   const dict = await getDictionary(params.lang)
+
   return (
-    <main className="flex flex-col items-center justify-between gap-8">
-      <Profile dict={dict.homepage} />
-      <Projects />
-      <Skills />
-      <FloatButtonMenu />
-    </main>
+    <>
+      <Profile
+        dict={dict.homepage}
+        facts={dict.facts}
+        cvLabel={dict.header.downloadCV}
+      />
+      <About
+        dict={dict.about}
+        contact={dict.contact}
+        cvLabel={dict.header.downloadCV}
+      />
+      <Skills dict={dict.skills} />
+      <Experience dict={dict.experience} work={dict.work} />
+    </>
   )
 }

@@ -71,3 +71,15 @@ export const skRestfulApi: SkillType = {
   name: "RESTful API",
   description: "RESTful API",
 }
+
+export const skApollo: SkillType = {
+  name: "Apollo",
+  description: "GraphQL server and client for Node.js",
+  url: "https://www.apollographql.com/",
+}
+
+export const skLaravel: SkillType = {
+  name: "Laravel",
+  description: "PHP framework for building backend services",
+  url: "https://laravel.com/",
+}

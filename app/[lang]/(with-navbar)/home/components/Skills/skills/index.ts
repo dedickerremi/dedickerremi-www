@@ -1,4 +1,6 @@
 import {
+  skApollo,
+  skLaravel,
   skNodeJs,
   skBullMQ,
   skExpress,
@@ -14,6 +16,8 @@ import {
 } from "./backendSkills"
 import { skPostgreSQL, skMySQL, skMongoDB } from "./databaseSkills"
 import {
+  skFigma,
+  skZustand,
   skReact,
   skNextJs,
   skReactQuery,
@@ -57,6 +61,7 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skReact,
     skNextJs,
     skReactQuery,
+    skZustand,
     skTypeScript,
     skUnitTest,
     skTailwindCSS,
@@ -67,6 +72,7 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skStorybook,
     skStyledComponents,
     skWebAccessibility,
+    skFigma,
     skJest,
     skVercel,
   ],
@@ -77,6 +83,8 @@ export const SKILLS: Record<string, Array<SkillType>> = {
     skFastify,
     skPrisma,
     skGraphQL,
+    skApollo,
+    skLaravel,
     skDocker,
     skPothos,
     skIntegrationTest,

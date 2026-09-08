@@ -1,9 +1,58 @@
 {
   "homepage": {
-    "jobPosition": "Senior Fullstack Developer",
-    "headline": "Du code au cloud, je suis votre développeur Fullstack de confiance, capable de créer des solutions évolutives et des designs innovants."
+    "jobPosition": "Senior Software Engineer",
+    "headline": "Je construis des plateformes web scalables et à fort impact dans l'e-commerce, le SaaS et les médias, avec des architectures résilientes et des services backend qui passent à l'échelle entre régions et équipes.",
+    "location": "Basé à Amsterdam"
+  },
+  "facts": {
+    "location": "Basé à",
+    "experience": "Expérience",
+    "focus": "Spécialité",
+    "education": "Formation",
+    "languages": "Langues",
+    "availability": "Disponibilité"
   },
   "header": {
-    "downloadCV": "Voir mon CV"
+    "downloadCV": "Voir mon CV",
+    "menu": "Menu"
+  },
+  "nav": {
+    "experience": "Expérience",
+    "skills": "Stack",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "work": {
+    "viewProject": "Voir le projet",
+    "stack": "Stack"
+  },
+  "experience": {
+    "title": "Expérience",
+    "standfirst": "Où j'ai travaillé, de quoi j'étais responsable, et ce qui a été livré.",
+    "shipped": "Livré à ce poste",
+    "highlights": "Faits marquants"
+  },
+  "skills": {
+    "title": "Savoir-faire & outils",
+    "standfirst": "Tout ce avec quoi je travaille, regroupé par couche et classé par fréquence d'utilisation.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de données",
+      "thirdParties": "Plateforme & services tiers",
+      "soft": "Méthodes de travail"
+    }
+  },
+  "contact": {
+    "title": "Construisons quelque chose",
+    "standfirst": "Ouvert aux postes de développeur fullstack senior et à des missions freelance choisies. L'email est le plus direct pour me joindre.",
+    "emailCta": "M'écrire",
+    "rights": "Tous droits réservés",
+    "builtWith": "Réalisé avec Next.js & Tailwind CSS"
+  },
+  "about": {
+    "title": "À propos",
+    "standfirst": "",
+    "education": "Formation"
   }
 }

@@ -4,28 +4,44 @@ type LinksProps = {
   className?: string
 }
 
-export const Links = ({ className }: LinksProps) => {
-  return (
-    <section className={className}>
-      <div className="container max-w-screen-xl mx-auto px-4">
-        <div className="flex items-center justify-center space-x-8">
-          <a
-            href="https://www.linkedin.com/in/remi-dedicker"
-            target="_blank"
-            className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500 shadow-xl"
-          >
-            <Image height={16} width={16} src="/linkedin.svg" alt="linked" />
-          </a>
+const PROFILES = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/remi-dedicker",
+    icon: "/linkedin.svg",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/dedickerremi",
+    icon: "/github.svg",
+  },
+]
 
+export const Links = ({ className = "" }: LinksProps) => {
+  return (
+    <ul className={`flex flex-wrap items-center gap-x-8 gap-y-3 ${className}`}>
+      {PROFILES.map(({ label, href, icon }) => (
+        <li key={label}>
           <a
-            href="https://github.com/dedickerremi"
+            href={href}
             target="_blank"
-            className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500 shadow-xl"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2.5 text-meta text-ink-muted transition-colors duration-300 ease-editorial hover:text-accent"
           >
-            <Image height={16} width={16} src="/github.svg" alt="github" />
+            <Image
+              height={14}
+              width={14}
+              src={icon}
+              alt=""
+              aria-hidden
+              className="opacity-50 transition-opacity duration-300 ease-editorial group-hover:opacity-100"
+            />
+            <span className="border-b border-rule pb-0.5 transition-colors duration-300 ease-editorial group-hover:border-accent">
+              {label}
+            </span>
           </a>
-        </div>
-      </div>
-    </section>
+        </li>
+      ))}
+    </ul>
   )
 }

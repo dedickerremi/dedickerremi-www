@@ -10,10 +10,10 @@ export default function Layout({
   params: { lang: CountryCode }
 }>) {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Navbar lang={lang} />
-      {children}
-      <Footer />
-    </>
+      <main className="flex-1">{children}</main>
+      <Footer lang={lang} />
+    </div>
   )
 }

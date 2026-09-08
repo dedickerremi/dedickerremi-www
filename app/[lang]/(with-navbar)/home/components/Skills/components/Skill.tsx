@@ -1,37 +1,58 @@
-import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
-import { SkillType } from "../skills/types"
-import Link from "next/link"
-import Image from "next/image"
+"use client"
 
-export const Skill = ({
-  skill,
-  className = "",
-}: {
+import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
+import Image from "next/image"
+import Link from "next/link"
+import { SkillType } from "../skills/types"
+
+type SkillProps = {
   skill: SkillType
-  className?: string
-  isLastSkill?: boolean
-}) => {
+}
+
+export const Skill = ({ skill }: SkillProps) => {
+  /* Most descriptions just repeat the name; only show a card when it adds
+     something. */
+  const hasDetail =
+    Boolean(skill.url) ||
+    skill.description.trim().toLowerCase() !== skill.name.trim().toLowerCase()
+
+  const label = <span className="text-ink">{skill.name}</span>
+
+  if (!hasDetail) return label
+
   return (
-    <span className="bg-gray-100 text-gray-800 text-sm font-medium py-1 px-3 rounded-full border border-gray-300">
-      <HoverCardPrimitive.HoverCard>
-        <HoverCardPrimitive.HoverCardTrigger>
-          #{skill.name}
-        </HoverCardPrimitive.HoverCardTrigger>
-        <HoverCardPrimitive.HoverCardContent className="flex flex-col w-max-60 border-2 border-prussianBlue bg-white text-prussianBlue p-4 mt-2 rounded-2xl text-sm">
+    <HoverCardPrimitive.Root openDelay={120} closeDelay={80}>
+      <HoverCardPrimitive.Trigger asChild>
+        <span className="cursor-default text-ink underline decoration-rule decoration-dotted underline-offset-4 transition-colors duration-300 ease-editorial hover:text-accent hover:decoration-accent">
+          {skill.name}
+        </span>
+      </HoverCardPrimitive.Trigger>
+
+      <HoverCardPrimitive.Portal>
+        <HoverCardPrimitive.Content
+          side="top"
+          sideOffset={8}
+          collisionPadding={16}
+          className="z-50 flex max-w-xs flex-col border border-ink bg-paper p-4 text-meta text-ink-muted shadow-[6px_6px_0_0_rgba(17,17,19,0.08)]"
+        >
           {skill.description}
 
           {skill.url && (
             <Link
               href={skill.url}
-              className="mt-4 underline flex flex-row items-center gap-2 text-wrap"
               target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-2 font-mono text-label uppercase text-ink transition-colors duration-300 ease-editorial hover:text-accent"
             >
-              <h6 className="text-xs">{skill.url} </h6>
-              <Image src="/new-tab.svg" width={12} height={12} alt="link" />
+              <span className="truncate">
+                {skill.url.replace(/^https?:\/\//, "")}
+              </span>
+              <Image src="/new-tab.svg" width={10} height={10} alt="" aria-hidden />
             </Link>
           )}
-        </HoverCardPrimitive.HoverCardContent>
-      </HoverCardPrimitive.HoverCard>
-    </span>
+          <HoverCardPrimitive.Arrow className="fill-ink" width={10} height={5} />
+        </HoverCardPrimitive.Content>
+      </HoverCardPrimitive.Portal>
+    </HoverCardPrimitive.Root>
   )
 }
